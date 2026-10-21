@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Наталья Шакирова, астролог без магии: разборы и цены</title>
+<meta name="description" content="Наталья Шакирова, астролог и астропсихолог. Разбор личности и дела, пары и семьи, ответ на один вопрос, деньги и прогноз на год. Цены, условия и запись в личку">
+<meta name="theme-color" content="#07080D">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Наталья Шакирова, астролог без магии">
+<meta property="og:description" content="Разборы по дате, времени и месту рождения и ответ на один вопрос. Цены, условия и запись в личку">
+<meta property="og:url" content="https://kursk-24.github.io/shakirova-astrolog/">
+<meta property="og:image" content="https://kursk-24.github.io/shakirova-astrolog/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/sky.webp">
+<style>
+:root{
+  --night:#07080D; --night-2:#0C0E16; --night-3:#121522;
+  --star:#FBF6EC; --moon:#E9E2D4; --mist:#C3BCAE; --mist-2:#9F998D;
+  --paper:#F7F4ED; --paper-2:#FFFFFF; --ink:#15171C; --ink-2:#454A55; --ink-3:#5E636E; --line:#E3DCCE;
+  --deep:#13514A; --deep-soft:#E6EFEC; --brass:#A8791F; --brass-ink:#7D5A14; --brass-soft:#F5EBD5;
+  --gold:#D9AE5A; --gold-2:#E9C77F; --emerald:#6FC0AE; --wine:#8E2F3F; --wine-soft:#F6E6E8;
+  --r:14px; --hdr:64px;
+  --ease-out:cubic-bezier(.23,1,.32,1);
+  --safe-t:env(safe-area-inset-top,0px); --safe-b:env(safe-area-inset-bottom,0px);
+  --safe-l:env(safe-area-inset-left,0px); --safe-r:env(safe-area-inset-right,0px);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth; background:var(--night)}
+body{margin:0; background:var(--night); color:var(--moon);
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  font-size:17px; line-height:1.6; overflow-x:hidden; -webkit-font-smoothing:antialiased}
+img{max-width:100%; display:block}
+a{color:inherit}
+h1,h2,h3,h4{font-family:Spectral,Georgia,serif; font-weight:600; line-height:1.15; letter-spacing:-.012em; margin:0; text-wrap:balance}
+p{margin:0 0 14px; text-wrap:pretty}
+.wrap{width:100%; max-width:1120px; margin:0 auto; padding-left:max(18px,var(--safe-l)); padding-right:max(18px,var(--safe-r))}
+.narrow{max-width:760px}
+.skip{position:absolute; left:-999px; top:0}
+.skip:focus{left:12px; top:12px; z-index:100; background:var(--gold); color:var(--ink); padding:10px 14px; border-radius:10px}
+:focus-visible{outline:2px solid var(--gold); outline-offset:3px; border-radius:6px}
+
+/* ---------- шапка ---------- */
+.hdr{position:fixed; top:0; left:0; right:0; z-index:50; padding-top:var(--safe-t);
+  background:rgba(7,8,13,.78); -webkit-backdrop-filter:saturate(140%) blur(14px); backdrop-filter:saturate(140%) blur(14px);
+  border-bottom:1px solid rgba(217,174,90,.18)}
+.hdr-in{height:var(--hdr); display:flex; align-items:center; gap:14px}
+.brand{display:flex; align-items:center; gap:11px; text-decoration:none; min-width:0; flex:1}
+.brand svg{flex:none; width:36px; height:36px}
+.brand-txt{display:block; min-width:0}
+.brand b{display:block; font-family:Spectral,serif; font-weight:600; font-size:18px; color:var(--star); line-height:1.1; white-space:nowrap}
+.brand-sub{display:block; font-size:11px; letter-spacing:.16em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-top:2px; white-space:nowrap}
+.nav{display:none}
+.nav a{color:var(--mist); text-decoration:none; font-size:14.5px; font-weight:500; padding:8px 2px; transition:color .2s}
+.nav a:hover{color:var(--star)}
+.write{flex:none; display:inline-flex; align-items:center; gap:7px; text-decoration:none; background:var(--gold); color:#16120A;
+  font-weight:600; font-size:15px; padding:10px 16px; border-radius:100px; min-height:42px; transition:transform .16s var(--ease-out), filter .2s}
+.write:hover{filter:brightness(1.07)}
+.write:active{transform:scale(.97)}
+.burger{flex:none; width:44px; height:44px; border-radius:12px; border:1px solid rgba(217,174,90,.3); background:transparent; color:var(--star); display:grid; place-items:center; cursor:pointer; padding:0}
+.burger svg{width:20px; height:20px}
+.menu{position:fixed; left:0; right:0; top:calc(var(--hdr) + var(--safe-t)); z-index:49; background:rgba(9,10,16,.97);
+  border-bottom:1px solid rgba(217,174,90,.22); padding:8px max(18px,var(--safe-l)) 18px; display:none}
+.menu.open{display:block}
+.menu a{display:block; color:var(--star); text-decoration:none; font-family:Spectral,serif; font-size:22px; padding:11px 0; border-bottom:1px solid rgba(255,255,255,.07)}
+@media (max-width:440px){ .brand b{font-size:15.5px} .brand-sub{font-size:10px; letter-spacing:.1em} .brand svg{width:30px;height:30px} .hdr-in{gap:10px} .write{padding:9px 14px; font-size:14.5px} }
+.brand b{overflow:hidden; text-overflow:ellipsis}
+@media (max-width:380px){ .brand b{font-size:14.5px} .brand-sub{font-size:10px; letter-spacing:.12em} .write{padding:9px 13px; font-size:14px} .brand svg{width:30px;height:30px} }
+@media (min-width:1080px){ .nav{display:flex; gap:22px} .burger,.menu{display:none!important} }
+
+section{position:relative; scroll-margin-top:calc(var(--hdr) + var(--safe-t) + 14px)}
+.sky{background:var(--night); overflow:hidden; isolation:isolate}
+.sky-canvas{position:absolute; inset:0; width:100%; height:100%; z-index:0; pointer-events:none}
+.sky > .wrap{position:relative; z-index:2}
+.neb{position:absolute; inset:0; z-index:0; background:center/cover no-repeat; opacity:.55; pointer-events:none}
+.neb-sky{background-image:url(img/sky.webp)}
+.neb-dust{background-image:url(img/stardust.webp); background-size:640px auto; background-repeat:repeat; opacity:.2}
+.planet{position:absolute; z-index:1; pointer-events:none; will-change:transform; mix-blend-mode:screen}
+.planet img{width:100%; height:auto; animation:drift 22s ease-in-out infinite alternate}
+.planet.slow img{animation-duration:30s}
+@keyframes drift{0%{transform:translate3d(0,0,0) rotate(0deg)}50%{transform:translate3d(-10px,14px,0) rotate(3deg)}100%{transform:translate3d(8px,-12px,0) rotate(-2deg)}}
+
+.sec{padding:84px 0}
+.h2{font-size:clamp(30px,6.6vw,52px); color:var(--star); margin-bottom:18px}
+.h2 em{font-style:italic; font-weight:400; color:var(--gold-2)}
+.lead{font-size:clamp(17px,2.2vw,19px); color:var(--mist); max-width:640px}
+.rule{height:1px; border:0; margin:0; background:linear-gradient(90deg,transparent,rgba(217,174,90,.55),transparent)}
+
+/* ---------- первый экран ---------- */
+.hero{background:var(--night); color:var(--star); padding-top:calc(var(--hdr) + var(--safe-t))}
+.hero-bg{position:absolute; left:0; right:0; top:calc(var(--hdr) + var(--safe-t)); height:clamp(250px,64vw,420px); z-index:0; background:#0A0B0F center 22%/cover no-repeat}
+.hero-bg video{width:100%; height:100%; object-fit:cover; object-position:50% 22%; display:block}
+.hero-bg .scrim{position:absolute; inset:0; background:linear-gradient(180deg,rgba(7,8,13,.25) 0%,rgba(7,8,13,.1) 40%,rgba(7,8,13,.78) 78%,var(--night) 100%)}
+.hero .sky-canvas{z-index:1}
+.hero-bg .sky-canvas{position:absolute; inset:0}
+.hero-in{position:relative; z-index:2; padding-top:calc(clamp(250px,64vw,420px) - 40px); padding-bottom:56px}
+.who{font-family:Spectral,serif; font-size:clamp(19px,4.6vw,22px); color:var(--gold-2); margin:0 0 10px}
+.who b{color:var(--star); font-weight:600}
+.hero h1{font-size:clamp(33px,8.4vw,66px); color:#FFF9EE; margin-bottom:14px; text-shadow:0 2px 30px rgba(0,0,0,.55)}
+.hero .lede{font-size:clamp(16px,2.1vw,19px); color:var(--mist); max-width:600px; margin-bottom:18px}
+.helps{list-style:none; padding:0; margin:0 0 24px; display:grid; gap:9px; max-width:600px}
+.helps li{display:flex; gap:12px; align-items:flex-start; font-size:15.5px; color:#E6DFD1; line-height:1.5}
+.helps svg{flex:none; width:14px; height:14px; margin-top:5px}
+.btns{display:flex; flex-wrap:wrap; gap:10px}
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:8px; text-decoration:none; font-weight:600; font-size:16.5px;
+  min-height:52px; padding:14px 22px; border-radius:100px; transition:transform .16s var(--ease-out), filter .2s, background .2s; text-align:center; line-height:1.3}
+.btn:active{transform:scale(.97)}
+.btn-gold{background:linear-gradient(180deg,#E7C27A,#CFA24E); color:#16120A; box-shadow:0 10px 30px rgba(217,174,90,.28), inset 0 1px 0 rgba(255,255,255,.45)}
+.btn-gold:hover{filter:brightness(1.06)}
+.btn-line{border:1px solid rgba(233,199,127,.55); color:var(--star); background:rgba(12,14,22,.55)}
+.btn-line:hover{background:rgba(217,174,90,.12)}
+.free-link{display:inline-flex; align-items:center; gap:8px; margin-top:16px; color:var(--gold-2); font-weight:500; font-size:15.5px; text-decoration:none; border-bottom:1px solid rgba(233,199,127,.45); padding-bottom:2px}
+.free-link:hover{color:var(--star)}
+@media (max-width:520px){ .btns .btn{flex:1 1 100%} }
+@media (min-width:900px){
+  .hero{min-height:100vh; min-height:100svh; display:flex; align-items:center}
+  .hero-bg{top:0; bottom:0; height:auto; left:34%}
+  .hero-bg .scrim{background:linear-gradient(90deg,var(--night) 0%,rgba(7,8,13,.6) 22%,rgba(7,8,13,.08) 52%,rgba(7,8,13,.15) 100%), linear-gradient(180deg,rgba(7,8,13,.35) 0%,transparent 25%,transparent 70%,var(--night) 100%)}
+  .hero-in{padding-top:110px; padding-bottom:90px}
+  .hero-copy{max-width:600px}
+}
+
+/* ---------- услуги ---------- */
+.svc-sec .planet-a{width:200px; right:-70px; top:-34px; opacity:.8}
+@media (min-width:900px){ .svc-sec .planet-a{width:440px; right:-110px; top:30px; opacity:.85} }
+.planet-pad{padding-top:150px}
+@media (min-width:900px){ .planet-pad{padding-top:96px} }
+.groups{display:grid; gap:34px; margin-top:34px}
+.group h3{font-family:Inter,sans-serif; font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); font-weight:600; margin:0 0 12px; display:flex; align-items:center; gap:12px}
+.group h3::after{content:""; flex:1; height:1px; background:linear-gradient(90deg,rgba(217,174,90,.45),transparent)}
+.cards{display:grid; gap:10px}
+@media (min-width:900px){ .cards{grid-template-columns:1fr 1fr} .svc[open]{grid-column:1/-1} }
+.svc{border-radius:var(--r); background:linear-gradient(180deg,rgba(23,26,38,.86),rgba(13,15,23,.9)); border:1px solid rgba(217,174,90,.22);
+  box-shadow:0 1px 0 rgba(255,255,255,.04) inset, 0 18px 40px rgba(0,0,0,.25); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); transition:border-color .25s}
+.svc:hover{border-color:rgba(217,174,90,.45)}
+.svc summary{list-style:none; cursor:pointer; display:grid; grid-template-columns:1fr auto; gap:3px 14px; padding:16px 18px; align-items:baseline}
+.svc summary::-webkit-details-marker{display:none}
+.svc-t{font-family:Spectral,serif; font-size:19.5px; font-weight:600; color:var(--star); line-height:1.25}
+.svc-p{font-family:Spectral,serif; font-size:19px; color:var(--gold-2); white-space:nowrap; font-weight:600}
+.svc-l{font-size:14.5px; color:var(--mist); line-height:1.45}
+.svc-arw{justify-self:end; align-self:center; width:28px; height:28px; border-radius:50%; border:1px solid rgba(217,174,90,.4); display:grid; place-items:center; transition:transform .3s var(--ease-out)}
+.svc-arw svg{width:12px; height:12px}
+.svc[open] .svc-arw{transform:rotate(180deg)}
+.svc-body{margin:0 10px 10px; background:var(--paper); color:var(--ink); border-radius:11px; padding:20px 18px 18px}
+.svc-name{font-family:Spectral,serif; font-size:20px; color:var(--ink); margin:0 0 4px}
+.svc-plain{font-size:14.5px; color:var(--ink-3); margin:0 0 14px}
+.svc dl{margin:0; display:grid; gap:14px}
+.svc dt{font-size:12px; letter-spacing:.14em; text-transform:uppercase; font-weight:600; color:var(--deep); margin-bottom:5px}
+.svc dd{margin:0; font-size:15.5px; color:var(--ink-2); line-height:1.55}
+.svc dd + dd{margin-top:4px}
+.svc dd.q{font-family:Spectral,serif; font-style:italic; font-size:17.5px; color:var(--ink)}
+.svc ul{margin:0; padding:0; list-style:none; display:grid; gap:6px}
+.svc ul li{position:relative; padding-left:18px; font-size:15.5px; color:var(--ink-2)}
+.svc ul li::before{content:""; position:absolute; left:2px; top:.62em; width:6px; height:6px; transform:rotate(45deg); background:var(--brass)}
+.cert{font-size:14px; color:var(--ink-2); background:var(--brass-soft); border:1px solid rgba(168,121,31,.35); border-radius:10px; padding:10px 12px; margin:14px 0 0}
+.hint{margin:16px 0 12px; font-size:15px; color:var(--wine); font-weight:500; background:var(--wine-soft); border-radius:10px; padding:11px 13px}
+.hint b{letter-spacing:.06em}
+.pair{display:grid; grid-template-columns:1fr 1fr; gap:8px}
+.pair a{display:flex; align-items:center; justify-content:center; text-decoration:none; min-height:50px; border-radius:10px; font-weight:600; font-size:15.5px; padding:12px 10px; text-align:center; transition:filter .2s, transform .16s var(--ease-out)}
+.pair a:active{transform:scale(.98)}
+.pair .max{background:var(--deep); color:#fff}
+.pair .tg{border:1.5px solid var(--ink); color:var(--ink)}
+.pair .max:hover{filter:brightness(1.12)}
+.pair.on-dark .tg{border-color:rgba(233,199,127,.6); color:var(--star)}
+.pair.on-dark .max{background:var(--gold); color:#16120A}
+@media (max-width:360px){ .pair{grid-template-columns:1fr} }
+.pick{margin-top:30px; border-radius:var(--r); border:1px dashed rgba(217,174,90,.45); padding:22px 20px; background:rgba(12,14,22,.6)}
+.pick h3{font-size:24px; color:var(--star); margin-bottom:8px}
+.pick p{color:var(--mist)}
+@media (max-width:600px){ .pick .pair{grid-template-columns:1fr} }
+
+/* ---------- почему сейчас ---------- */
+.why .planet-b{width:170px; right:-36px; top:-10px; opacity:.9}
+@media (min-width:900px){ .why .planet-b{width:300px; right:-170px; top:-90px} }
+.why .planet-c{width:min(220px,40vw); right:4%; bottom:40px; opacity:.75}
+.why-grid{display:grid; gap:30px}
+@media (min-width:900px){ .why-grid{grid-template-columns:1.05fr .95fr; gap:56px; align-items:start} .why .h2{margin-top:0} }
+.why-copy p{color:#DAD3C5; font-size:17.5px}
+.why-copy p.big{font-family:Spectral,serif; font-size:clamp(22px,3.4vw,28px); line-height:1.35; color:var(--star)}
+.cost{list-style:none; padding:0; margin:0 0 20px; display:grid; gap:10px}
+.cost li{padding:12px 14px 12px 16px; border-radius:12px; background:rgba(142,47,63,.16); border:1px solid rgba(229,143,160,.2); color:#EBDCD8; font-size:16px}
+.asks{list-style:none; padding:0; margin:0; display:grid; gap:10px}
+.asks a{display:flex; justify-content:space-between; align-items:center; gap:14px; text-decoration:none; padding:15px 16px; border-radius:12px;
+  background:rgba(18,21,34,.78); border:1px solid rgba(217,174,90,.22); color:var(--star); font-family:Spectral,serif; font-style:italic; font-size:18.5px; line-height:1.35; transition:border-color .25s, background .25s}
+.asks a:hover{border-color:rgba(217,174,90,.6); background:rgba(28,30,44,.9)}
+.asks small{font-family:Inter,sans-serif; font-style:normal; font-size:12.5px; color:var(--gold); white-space:nowrap; letter-spacing:.04em}
+.asks-h{font-family:Inter,sans-serif; font-size:13px; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); font-weight:600; margin:0 0 12px}
+
+/* ---------- светлые листы ---------- */
+.sheet{background:var(--paper); color:var(--ink); border-radius:18px; padding:clamp(22px,4vw,40px); box-shadow:0 30px 70px rgba(0,0,0,.4); position:relative}
+.sheet .h2{color:var(--ink)}
+.sheet .h2 em{color:var(--brass-ink)}
+.sheet p{color:var(--ink-2)}
+.steps{list-style:none; counter-reset:s; padding:0; margin:22px 0; display:grid; gap:0}
+.steps li{counter-increment:s; position:relative; padding:14px 0 14px 54px; border-top:1px solid var(--line); color:var(--ink-2); font-size:16.5px}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(s); position:absolute; left:0; top:12px; width:36px; height:36px; border-radius:50%; border:1px solid var(--brass); color:var(--brass-ink); font-family:Spectral,serif; font-weight:600; display:grid; place-items:center; font-size:17px}
+.steps b{color:var(--ink); font-weight:600}
+.note-box{border-radius:12px; padding:14px 16px; margin:0 0 12px; font-size:16px}
+.note-box.pay{background:var(--deep-soft); color:var(--ink)}
+.note-box.one{background:var(--brass-soft); color:var(--ink)}
+.consent{font-size:13px; color:var(--ink-3); line-height:1.5; margin:14px 0 0}
+.consent a{color:var(--ink-2); text-underline-offset:2px}
+.consent.on-dark{color:var(--mist-2)}
+.consent.on-dark a{color:var(--mist)}
+
+/* ---------- примеры ---------- */
+.cases .planet-d{width:190px; right:-60px; top:-20px; opacity:.8}
+@media (min-width:900px){ .cases .planet-d{width:300px; right:-70px; top:-30px} }
+.case-grid{display:grid; gap:16px; margin-top:30px}
+@media (min-width:900px){ .case-grid{grid-template-columns:repeat(3,1fr)} }
+.case{margin:0; background:var(--paper); color:var(--ink); border-radius:16px; padding:22px 20px 18px; display:flex; flex-direction:column; box-shadow:0 22px 50px rgba(0,0,0,.35)}
+.case h3{font-size:23px; margin-bottom:12px}
+.case dl{margin:0; display:grid; gap:11px; flex:1}
+.case dt{font-size:11.5px; letter-spacing:.15em; text-transform:uppercase; font-weight:600; color:var(--deep)}
+.case dd{margin:2px 0 0; font-size:15.5px; color:var(--ink-2); line-height:1.5}
+.case dd.q{font-family:Spectral,serif; font-style:italic; font-size:17.5px; color:var(--ink)}
+.case figcaption{margin-top:16px; padding-top:12px; border-top:1px solid var(--line); font-size:13px; color:var(--ink-3)}
+.quote{margin:34px 0 0; text-align:center; padding:34px 10px 6px; position:relative}
+.quote blockquote{margin:0 auto; max-width:760px; font-family:Spectral,serif; font-style:italic; font-size:clamp(26px,5vw,40px); line-height:1.25; color:var(--star)}
+.quote figcaption{margin-top:14px; color:var(--gold); font-size:13px; letter-spacing:.16em; text-transform:uppercase; font-weight:600}
+.quote svg{width:34px; height:34px; margin:0 auto 14px}
+
+/* ---------- обо мне ---------- */
+.about-grid{display:grid; gap:22px}
+.about .h2{margin-bottom:14px}
+.about p.me{font-family:Spectral,serif; font-size:clamp(21px,3vw,25px); line-height:1.4; color:var(--ink)}
+.certs summary{cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:10px; padding:14px 16px; border-radius:12px; border:1px solid var(--brass); color:var(--brass-ink); font-weight:600; font-size:16px}
+.certs summary::-webkit-details-marker{display:none}
+.certs summary svg{width:12px; height:12px; transition:transform .3s var(--ease-out)}
+.certs[open] summary svg{transform:rotate(180deg)}
+.certs ol{margin:14px 0 0; padding:0; list-style:none; display:grid; gap:0}
+.certs li{padding:11px 0; border-top:1px solid var(--line); display:grid; gap:2px}
+.certs li b{font-family:Spectral,serif; font-size:18px; color:var(--ink); font-weight:600}
+.certs li span{font-size:14px; color:var(--ink-3)}
+
+/* ---------- бесплатно ---------- */
+.free{padding:110px 0}
+.free{padding-top:40px}
+.free .planet-e{position:relative; width:min(420px,80vw); margin:0 auto -40px; opacity:.95}
+.free .wrap{text-align:center}
+.free .lead{margin:0 auto 26px}
+
+/* ---------- вопросы ---------- */
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-of-type{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:14px; padding:17px 0; font-family:Spectral,serif; font-size:20px; font-weight:600; color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{flex:none; width:28px; height:28px; border-radius:50%; border:1px solid var(--brass); position:relative}
+.faq summary i::before,.faq summary i::after{content:""; position:absolute; left:50%; top:50%; width:11px; height:1.5px; background:var(--brass-ink); transform:translate(-50%,-50%); transition:transform .3s var(--ease-out)}
+.faq summary i::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq details[open] summary i::after{transform:translate(-50%,-50%) rotate(0)}
+.faq .a{padding:0 0 16px}
+.faq .a p{font-size:16.5px}
+
+/* ---------- финал и подвал ---------- */
+.final{padding:150px 0 70px}
+.final .wrap{text-align:center}
+.final .lead{margin:0 auto 26px}
+.final .pair{max-width:520px; margin:0 auto}
+.final .pair a{min-height:56px; font-size:16.5px; border-radius:100px}
+footer{background:#05060A; border-top:1px solid rgba(217,174,90,.16); padding:44px 0 calc(40px + var(--safe-b)); color:var(--mist-2); font-size:14px}
+.f-grid{display:grid; gap:22px}
+@media (min-width:900px){ .f-grid{grid-template-columns:1.2fr 1fr; align-items:start} }
+.f-brand b{font-family:Spectral,serif; color:var(--star); font-size:22px; font-weight:600; display:block}
+.f-brand span{color:var(--gold); font-size:12px; letter-spacing:.16em; text-transform:uppercase; font-weight:600}
+.f-links{display:flex; flex-wrap:wrap; gap:10px 20px; margin:16px 0}
+.f-links a{color:var(--mist); text-decoration:none; border-bottom:1px solid rgba(195,188,174,.3); padding-bottom:2px}
+.f-links a:hover{color:var(--star)}
+.docs{display:grid; gap:9px}
+.docs a{color:var(--mist); text-underline-offset:3px}
+.legal{margin-top:24px; padding-top:18px; border-top:1px solid rgba(255,255,255,.07); display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; align-items:center}
+.legal p{margin:0}
+.top{color:var(--gold-2); text-decoration:none; font-weight:600}
+
+/* ---------- появление ---------- */
+.rise{opacity:0; transform:translateY(18px); transition:opacity .9s var(--ease-out), transform .9s var(--ease-out)}
+.rise.in{opacity:1; transform:none}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  .hero-bg video{display:none}
+  .hero-bg{background-image:url(hero-poster.jpg)}
+  .planet img{animation:none}
+  .rise{opacity:1; transform:none; transition:none}
+  *{transition-duration:0s!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#uslugi">К услугам</a>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="brand" href="#top" aria-label="Наверх">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><defs><radialGradient id="mk" cx="50%" cy="45%"><stop offset="0" stop-color="#FFE9B0"/><stop offset="1" stop-color="#C9973E"/></radialGradient></defs><circle cx="20" cy="20" r="18" fill="none" stroke="#D9AE5A" stroke-width="1.6"/><circle cx="20" cy="20" r="4.6" fill="url(#mk)"/><path d="M20 6.5v4M20 29.5v4M6.5 20h4M29.5 20h4" stroke="#D9AE5A" stroke-width="1.2" stroke-linecap="round" opacity=".7"/></svg>
+      <span class="brand-txt"><b>Астролог без магии</b><span class="brand-sub">Наталья Шакирова</span></span>
+    </a>
+    <nav class="nav" aria-label="Разделы">
+      <a href="#uslugi">Услуги</a><a href="#pochemu">Почему сейчас</a><a href="#kak">Как работаю</a><a href="#primery">Примеры</a><a href="#obo-mne">Обо мне</a><a href="#voprosy">Вопросы</a>
+    </nav>
+    <a class="write" href="https://t.me/ShakirNat?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%BE%D0%BC%D0%BE%D0%B3%D0%B8%D1%82%D0%B5%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80" target="_blank" rel="noopener">Написать</a>
+    <button class="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="menu">
+      <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 6h16M2 14h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+<nav class="menu" id="menu" aria-label="Разделы">
+  <a href="#uslugi">Услуги</a><a href="#pochemu">Почему сейчас</a><a href="#kak">Как работаю</a><a href="#primery">Примеры</a><a href="#obo-mne">Обо мне</a><a href="#voprosy">Вопросы</a>
+</nav>
+
+<main>
+<section class="hero sky" id="top">
+  <div class="hero-bg">
+    <video src="hero.mp4" poster="hero-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+    <div class="scrim"></div>
+    <canvas class="sky-canvas" data-stars="hero" aria-hidden="true"></canvas>
+  </div>
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="who"><b>Наталья Шакирова</b>, астролог и астропсихолог</p>
+      <h1>Не гадание, а точный аудит вашей жизни</h1>
+      <p class="lede">Я и сама прагматик. Ценю астрологию за то, что она показывает системные ошибки: где утекают деньги, почему повторяется один и тот же сценарий, когда начинать, а когда переждать</p>
+      <ul class="helps">
+        <li><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0 L8 6 L14 7 L8 8 L7 14 L6 8 L0 7 L6 6 Z" fill="#E9C77F"/></svg><span>Разобраться в себе и в деле: в чём ваша сила и куда уходят силы впустую</span></li>
+        <li><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0 L8 6 L14 7 L8 8 L7 14 L6 8 L0 7 L6 6 Z" fill="#E9C77F"/></svg><span>Пара, ребёнок, семья: что между вами происходит и что тянется из поколения в поколение</span></li>
+        <li><svg viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0 L8 6 L14 7 L8 8 L7 14 L6 8 L0 7 L6 6 Z" fill="#E9C77F"/></svg><span>Один вопрос, который не даёт спать, и честный ответ на него: да или нет</span></li>
+      </ul>
+      <div class="btns">
+        <a class="btn btn-gold" href="#uslugi">Выбрать разбор ↓</a>
+        <a class="btn btn-line" href="#s-horar">Задать один вопрос</a>
+      </div>
+      <a class="free-link" href="https://kursk-24.github.io/prognoz-shakirova/" target="_blank" rel="noopener">Сначала бесплатно: прогноз на месяц ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky svc-sec planet-pad" id="uslugi">
+  <div class="neb neb-sky" aria-hidden="true"></div>
+  <canvas class="sky-canvas" aria-hidden="true"></canvas>
+  <div class="planet planet-a slow" data-par="0.12" aria-hidden="true"><img src="img/planet-emerald.webp" alt="" width="720" height="720" decoding="async"></div>
+  <div class="wrap">
+    <h2 class="h2">С чем вы <em>пришли</em></h2>
+    <p class="lead">Пять тем и одиннадцать разборов. Нажмите на карточку: внутри написано, с каким вопросом приходят, что вы получите и что нужно от вас</p>
+
+    <div class="groups">
+      <div class="group">
+        <h3>Про себя и дело</h3>
+        <div class="cards">
+          <details class="svc" id="s-lichnost">
+            <summary><span class="svc-t">Кто я и куда мне в работе</span><span class="svc-p">12 000 ₽</span><span class="svc-l">Сильные и слабые стороны, деньги, работа и отношения в одной картине</span><span class="svc-arw" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="#E9C77F" stroke-width="1.5" stroke-linecap="round"/></svg></span></summary>
+            <div class="svc-body">
+              <h4 class="svc-name">Фундаментальный разбор личности и карьеры</h4>
+              <p class="svc-plain">Большой разбор вас целиком: характер, работа, деньги, отношения</p>
+              <dl>
+                <div><dt>С каким вопросом приходят</dt><dd class="q">«Вроде всё делаю правильно, а живу как будто чужую жизнь»</dd><dd class="q">«Почему я выгораю на работе, которую сама выбрала?»</dd></div>
+                <div><dt>Что вы получите</dt><dd><ul><li>Ваши сильные и слабые стороны, ваша психология</li><li>Деньги, работа и личные отношения по вашей карте</li><li>Как вернуться к своей настоящей энергии</li></ul></dd></div>
+                <div><dt>Что нужно от вас</dt><dd><ul><li>Дата, точное время и место рождения</li><li>Разговор о событиях вашего прошлого перед разбором</li></ul></dd></div>
+                <div><dt>Как и когда</dt><dd>PDF и подробные голосовые (или встреча в Zoom) через 2-7 рабочих дней после того, как я получу все данные</dd></div>
+              </dl>
+              <p class="cert">Сертификаты «Натальная астрология» и «Натал-Эксперт», Академия Astrovegis</p>
+              <p class="hint">В Telegram сообщение с названием разбора подставится само, в MAX просто напишите его название</p>
+              <div class="pair">
+                <a class="max" href="https://max.ru/u/f9LHodD0cOJmwy9Yo51txASlvxHI5Sg26Z7G7Q9MqKHAkw8haNu51zCBqUs" target="_blank" rel="noopener">Написать в MAX</a>
+                <a class="tg" href="https://t.me/ShakirNat?text=%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%3A%20%D0%A4%D1%83%D0%BD%D0%B4%D0%B0%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80%20%D0%BB%D0%B8%D1%87%D0%BD%D0%BE%D1%81%D1%82%D0%B8%20%D0%B8%20%D0%BA%D0%B0%D1%80%D1%8C%D0%B5%D1%80%D1%8B" target="_blank" rel="noopener">Написать в Telegram</a>
+              </div>
+            </div>
+          </details>
+          <details class="svc" id="s-delo">
+            <summary><span class="svc-t">Моё ли это дело</span><span class="svc-p">12 000 ₽</span><span class="svc-l">Скрытые таланты и ниши, в которых за них платят</span><span class="svc-arw" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="#E9C77F" stroke-width="1.5" stroke-linecap="round"/></svg></span></summary>
+            <div class="svc-body">
+              <h4 class="svc-name">Астрология профессионального предназначения</h4>
+              <p class="svc-plain">Разбор призвания: в чём ваш талант и где он приносит деньги</p>
+              <dl>
+                <div><dt>С каким вопросом приходят</dt><dd class="q">«А вообще моё ли это?»</dd><dd class="q">«Менять профессию или я просто устала?»</dd></div>
+                <div><dt>Что вы получите</dt><dd><ul><li>Вектор развития</li><li>Скрытые таланты</li><li>Ниши для финансового успеха</li><li>Главная задача, с которой вы пришли в эту жизнь</li></ul></dd></div>
+                <div><dt>Что нужно от вас</dt><dd><ul><li>Дата, точное время и место рождения</li><li>Разговор о событиях вашего прошлого перед разбором</li></ul></dd></div>
+                <div><dt>Как и когда</dt><dd>PDF и подробные голосовые (или встреча в Zoom) через 2-7 рабочих дней после того, как я получу все данные</dd></div>
+              </dl>
+              <p class="cert">Сертификат «Астрология профессионального предназначения», Высшая школа астрологии Елены Негрей</p>
+              <p class="hint">В Telegram сообщение с названием разбора подставится само, в MAX просто напишите его название</p>
+              <div class="pair">
+                <a class="max" href="https://max.ru/u/f9LHodD0cOJmwy9Yo51txASlvxHI5Sg26Z7G7Q9MqKHAkw8haNu51zCBqUs" target="_blank" rel="noopener">Написать в MAX</a>
+                <a class="tg" href="https://t.me/ShakirNat?text=%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%3A%20%D0%90%D1%81%D1%82%D1%80%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F%20%D0%BF%D1%80%D0%BE%D1%84%D0%B5%D1%81%D1%81%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE%20%D0%BF%D1%80%D0%B5%D0%B4%D0%BD%D0%B0%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D1%8F" target="_blank" rel="noopener">Написать в Telegram</a>
+              </div>
+            </div>
+          </details>
+          <details class="svc" id="s-rebenok">
+            <summary><span class="svc-t">Какой у меня ребёнок</span><span class="svc-p">10 000 ₽</span><span class="svc-l">Таланты, как он усваивает новое, какие кружки и спорт ему подойдут</span><span class="svc-arw" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="#E9C77F" stroke-width="1.5" stroke-linecap="round"/></svg></span></summary>
+            <div class="svc-body">
+              <h4 class="svc-name">Детский гороскоп и особенности развития</h4>
+              <p class="svc-plain">Разбор для родителей: как помочь ребёнку раскрыться</p>
+              <dl>
+                <div><dt>С каким вопросом приходят</dt><dd class="q">«Сын не хочет на футбол, может, это не его?»</dd><dd class="q">«Почему ей так тяжело даётся учёба?»</dd></div>
+                <div><dt>Что вы получите</dt><dd><ul><li>Врождённые таланты ребёнка</li><li>Как он воспринимает информацию</li><li>Подбор спорта и кружков</li></ul></dd></div>
+                <div><dt>Что нужно от вас</dt><dd><ul><li>Дата, точное время и место рождения ребёнка</li><li>Разговор о событиях его жизни перед разбором</li></ul></dd></div>
+                <div><dt>Как и когда</dt><dd>PDF и подробные голосовые (или встреча в Zoom) через 2-7 рабочих дней после того, как я получу все данные</dd></div>
+              </dl>
+              <p class="cert">Сертификат «Детская астрология», Высшая школа астрологии Елены Негрей</p>
+              <p class="hint">В Telegram сообщение с названием разбора подставится само, в MAX просто напишите его название</p>
+              <div class="pair">
+                <a class="max" href="https://max.ru/u/f9LHodD0cOJmwy9Yo51txASlvxHI5Sg26Z7G7Q9MqKHAkw8haNu51zCBqUs" target="_blank" rel="noopener">Написать в MAX</a>
+                <a class="tg" href="https://t.me/ShakirNat?text=%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%3A%20%D0%94%D0%B5%D1%82%D1%81%D0%BA%D0%B8%D0%B9%20%D0%B3%D0%BE%D1%80%D0%BE%D1%81%D0%BA%D0%BE%D0%BF%20%D0%B8%20%D0%BE%D1%81%D0%BE%D0%B1%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8%20%D1%80%D0%B0%D0%B7%D0%B2%D0%B8%D1%82%D0%B8%D1%8F" target="_blank" rel="noopener">Написать в Telegram</a>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="group">
+        <h3>Про пару и род</h3>
+        <div class="cards">
+          <details class="svc" id="s-para">
+            <summary><span class="svc-t">Подходим ли мы друг другу</span><span class="svc-p">12 000 ₽</span><span class="svc-l">Пара, родители и дети, партнёры по делу, сотрудники</span><span class="svc-arw" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="#E9C77F" stroke-width="1.5" stroke-linecap="round"/></svg></span></summary>
+            <div class="svc-body">
+              <h4 class="svc-name">Совместимость и сексуальная энергия (синастрия)</h4>
+              <p class="svc-plain">Разбор отношений двух людей: как вы влияете друг на друга</p>
+              <dl>
+                <div><dt>С каким вопросом приходят</dt><dd class="q">«Быт всё съел, живём как соседи»</dd><dd class="q">«Почему рядом с этим человеком я всё время на взводе?»</dd></div>
+                <div><dt>Что вы получите</dt><dd><ul><li>Как вы влияете друг на друга</li><li>Как вернуть гармонию после быта и рутины</li><li>Как раскрыть сексуальную энергию в паре</li><li>Подходит и для родителей с детьми, партнёров по делу, персонала</li></ul></dd></div>
+                <div><dt>Что нужно от вас</dt><dd><ul><li>Дата, точное время и место рождения обоих</li><li>Разговор о событиях прошлого перед разбором</li></ul></dd></div>
+                <div><dt>Как и когда</dt><dd>PDF и подробные голосовые (или встреча в Zoom) через 2-7 рабочих дней после того, как я получу все данные</dd></div>
+              </dl>
+              <p class="cert">Сертификат «Синастрия. Астрология взаимоотношений», Академия Astrovegis</p>
+              <p class="hint">Нажмите любую кнопку и напишите мне слово <b>СОВМЕСТИМОСТЬ</b>, я расскажу про все условия</p>
+              <div class="pair">
+                <a class="max" href="https://max.ru/u/f9LHodD0cOJmwy9Yo51txASlvxHI5Sg26Z7G7Q9MqKHAkw8haNu51zCBqUs" target="_blank" rel="noopener">Написать в MAX</a>
+                <a class="tg" href="https://t.me/ShakirNat?text=%D0%A1%D0%9E%D0%92%D0%9C%D0%95%D0%A1%D0%A2%D0%98%D0%9C%D0%9E%D0%A1%D0%A2%D0%AC" target="_blank" rel="noopener">Написать в Telegram</a>
+              </div>
+            </div>
+          </details>
+          <details class="svc" id="s-rod">
+            <summary><span class="svc-t">Почему в семье всё повторяется</span><span class="svc-p">12 000 ₽</span><span class="svc-l">Сценарии, которые передаются по роду</span><span class="svc-arw" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="#E9C77F" stroke-width="1.5" stroke-linecap="round"/></svg></span></summary>
+            <div class="svc-body">
+              <h4 class="svc-name">Кармическая астрология и родовые сценарии</h4>
+              <p class="svc-plain">Разбор семейных сценариев, которые тянутся из поколения в поколение</p>
+              <dl>
+                <div><dt>С каким вопросом приходят</dt><dd class="q">«У бабушки так было, у мамы, теперь у меня»</dd><dd class="q">«Деньги в нашей семье будто не держатся»</dd></div>
+                <div><dt>Что вы получите</dt><dd><ul><li>Скрытые семейные программы, которые передались вам</li><li>Как они влияют на судьбу, деньги и личную жизнь</li></ul></dd></div>
+                <div><dt>Что нужно от вас</dt><dd><ul><li>Дата, точное время и место рождения</li><li>Разговор о событиях вашего прошлого перед разбором</li></ul></dd></div>
+                <div><dt>Как и когда</dt><dd>PDF и подробные голосовые (или встреча в Zoom) через 2-7 рабочих дней после того, как я получу все данные</dd></div>
+              </dl>
+              <p class="cert">Сертификаты «Кармическая астрология» (Академия Astrovegis) и «Астрология родового наследия» (Высшая школа астрологии Елены Негрей)</p>
+              <p class="hint">В Telegram сообщение с названием разбора подставится само, в MAX просто напишите его название</p>
+              <div class="pair">
+                <a class="max" href="https://max.ru/u/f9LHodD0cOJmwy9Yo51txASlvxHI5Sg26Z7G7Q9MqKHAkw8haNu51zCBqUs" target="_blank" rel="noopener">Написать в MAX</a>
+                <a class="tg" href="https://t.me/ShakirNat?text=%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%3A%20%D0%9A%D0%B0%D1%80%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F%20%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F%20%D0%B8%20%D1%80%D0%BE%D0%B4%D0%BE%D0%B2%D1%8B%D0%B5%20%D1%81%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B8" target="_blank" rel="noopener">Написать в Telegram</a>
+              </div>
+            </div>
+          </details>
+          <details class="svc" id="s-soyuz">
+            <summary><span class="svc-t">Зачем мы встретились</span><span class="svc-p">12 000 ₽</span><span class="svc-l">Смысл и общие задачи вашего союза</span><span class="svc-arw" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="#E9C77F" stroke-width="1.5" stroke-linecap="round"/></svg></span></summary>
+            <div class="svc-body">
+              <h4 class="svc-name">Кармическая синастрия и композит (средняя карта)</h4>
+              <p class="svc-plain">Разбор пары как одного целого: ради чего вы вместе</p>
+              <dl>
+                <div><dt>С каким вопросом приходят</dt><dd class="q">«Мы столько вместе прошли, ради чего всё это?»</dd></div>
+                <div><dt>Что вы получите</dt><dd><ul><li>Высший смысл вашего союза</li><li>Совместные задачи пары</li></ul></dd></div>
+                <div><dt>Что нужно от вас</dt><dd><ul><li>Ваши дата, точное время и место рождения</li><li>Дата рождения партнёра, точное время партнёра знать не обязательно</li></ul></dd></div>
+                <div><dt>Как и когда</dt><dd>PDF и подробные голосовые (или встреча в Zoom) через 2-7 рабочих дней после того, как я получу все данные</dd></div>
+              </dl>
+              <p class="cert">Сертификат «Кармическая астрология», Академия Astrovegis</p>
+              <p class="hint">В Telegram сообщение с названием разбора подставится само, в MAX просто напишите его название</p>
+              <div class="pair">
+                <a class="max" href="https://max.ru/u/f9LHodD0cOJmwy9Yo51txASlvxHI5Sg26Z7G7Q9MqKHAkw8haNu51zCBqUs" target="_blank" rel="noopener">Написать в MAX</a>
+                <a class="tg" href="https://t.me/ShakirNat?text=%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%3A%20%D0%9A%D0%B0%D1%80%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F%20%D1%81%D0%B8%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%B8%D1%8F%20%D0%B8%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%20%28%D1%81%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%D1%8F%20%D0%BA%D0%B0%D1%80%D1%82%D0%B0%29" target="_blank" rel="noopener">Написать в Telegram</a>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="group">
+        <h3>Один вопрос</h3>
+        <div class="cards">
+          <details class="svc" id="s-horar">
+            <summary><span class="svc-t">Один вопрос: да или нет</span><span class="svc-p">4 000 ₽</span><span class="svc-l">Вернут ли деньги, подписывать ли, уходить ли с работы</span><span class="svc-arw" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="#E9C77F" stroke-width="1.5" stroke-linecap="round"/></svg></span></summary>
+            <div class="svc-body">
+              <h4 class="svc-name">Хорарная астрология</h4>
+              <p class="svc-plain">Ответ на один конкретный вопрос по минуте, когда он у вас возник</p>
+              <dl>
+                <div><dt>С каким вопросом приходят</dt><dd class="q">«Вернут ли мне долг?»</dd><dd class="q">«Брать это предложение о работе?»</dd><dd class="q">«Продавать квартиру сейчас?»</dd><dd class="q">«Где пропавшая вещь?»</dd></div>
+                <div><dt>Что вы получите</dt><dd><ul><li>Точный ответ «да» или «нет» на один конкретный вопрос</li><li>Оперативное голосовое</li><li>Темы: отношения, работа, имущество, потерянные вещи</li></ul></dd></div>
+                <div><dt>Что нужно от вас</dt><dd><ul><li>Точное время, когда вопрос возник у вас в голове, до минуты, например 14:52</li><li>Дата рождения не нужна</li></ul></dd></div>
+                <div><dt>Как и когда</dt><dd>Ответ приходит голосовым, оперативно</dd></div>
+              </dl>
+              <p class="cert">Сертификат №172 «Хорарная астрология», Академия Astrovegis</p>
+              <p class="hint">Нажмите любую кнопку и напишите мне слово <b>ХОРАР</b>, я расскажу про все условия</p>
+              <div class="pair">
+                <a class="max" href="https://max.ru/u/f9LHodD0cOJmwy9Yo51txASlvxHI5Sg26Z7G7Q9MqKHAkw8haNu51zCBqUs" target="_blank" rel="noopener">Написать в MAX</a>
+                <a class="tg" href="https://t.me/ShakirNat?text=%D0%A5%D0%9E%D0%A0%D0%90%D0%A0" target="_blank" rel="noopener">Написать в Telegram</a>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="group">
+        <h3>Деньги и год вперёд</h3>
+        <div class="cards">
+          <details class="svc" id="s-biznes">
+            <summary><span class="svc-t">Деньги в вашем деле</span><span class="svc-p">15 000 ₽</span><span class="svc-l">Для экспертов и предпринимателей</span><span class="svc-arw" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="#E9C77F" stroke-width="1.5" stroke-linecap="round"/></svg></span></summary>
+            <div class="svc-body">
+              <h4 class="svc-name">Финансовая и бизнес-астрология</h4>
+              <p class="svc-plain">Разбор денег в деле: на какой доход вы рассчитаны и как расти</p>
+              <dl>
+                <div><dt>С каким вопросом приходят</dt><dd class="q">«Доход стоит на месте, хотя работаю всё больше»</dd><dd class="q">«Расширяться сейчас или подождать?»</dd></div>
+                <div><dt>Что вы получите</dt><dd><ul><li>Финансовая ёмкость вашего дела</li><li>Стратегия масштабирования</li><li>Как привлечь платёжеспособную аудиторию</li></ul></dd></div>
+                <div><dt>Что нужно от вас</dt><dd><ul><li>Дата, точное время и место рождения</li><li>Разговор о событиях вашего прошлого перед разбором</li></ul></dd></div>
+                <div><dt>Как и когда</dt><dd>PDF и подробные голосовые (или встреча в Zoom) через 2-7 рабочих дней после того, как я получу все данные</dd></div>
+              </dl>
+              <p class="cert">Сертификат «Финансовая и бизнес-астрология», Академия Astrovegis и Высшая школа астрологии Елены Негрей</p>
+              <p class="hint">В Telegram сообщение с названием разбора подставится само, в MAX просто напишите его название</p>
+              <div class="pair">
+                <a class="max" href="https://max.ru/u/f9LHodD0cOJmwy9Yo51txASlvxHI5Sg26Z7G7Q9MqKHAkw8haNu51zCBqUs" target="_blank" rel="noopener">Написать в MAX</a>
+                <a class="tg" href="https://t.me/ShakirNat?text=%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%3A%20%D0%A4%D0%B8%D0%BD%D0%B0%D0%BD%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B8%20%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81-%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F" target="_blank" rel="noopener">Написать в Telegram</a>
+              </div>
+            </div>
+          </details>
+          <details class="svc" id="s-god">
+            <summary><span class="svc-t">Что ждёт в следующем году</span><span class="svc-p">14 000 ₽</span><span class="svc-l">Прогноз на год по двум сферам на выбор</span><span class="svc-arw" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="#E9C77F" stroke-width="1.5" stroke-linecap="round"/></svg></span></summary>
+            <div class="svc-body">
+              <h4 class="svc-name">Астрологическое прогнозирование (краткосрочное)</h4>
+              <p class="svc-plain">Прогноз на год вперёд по двум самым важным для вас темам</p>
+              <dl>
+                <div><dt>С каким вопросом приходят</dt><dd class="q">«Когда в 2027 году начинать, а когда не дёргаться?»</dd><dd class="q">«Будет ли движение в деньгах?»</dd></div>
+                <div><dt>Что вы получите</dt><dd><ul><li>Прогноз на 1 год по двум любым сферам: финансы, отношения, дети, карьера</li><li>Разбивка по периодам: когда начинать, когда не трогать, когда собирать урожай</li></ul></dd></div>
+                <div><dt>Что нужно от вас</dt><dd><ul><li>Дата, точное время и место рождения</li><li>Разговор о событиях вашего прошлого перед разбором</li></ul></dd></div>
+                <div><dt>Как и когда</dt><dd>PDF и подробные голосовые (или встреча в Zoom) через 2-7 рабочих дней после того, как я получу все данные</dd></div>
+              </dl>
+              <p class="cert">Сертификат «Астрология прогнозирования», Высшая школа астрологии Елены Негрей и Академия Astrovegis</p>
+              <p class="hint">Нажмите любую кнопку и напишите мне слово <b>ГОД</b>, я расскажу про все условия</p>
+              <div class="pair">
+                <a class="max" href="https://max.ru/u/f9LHodD0cOJmwy9Yo51txASlvxHI5Sg26Z7G7Q9MqKHAkw8haNu51zCBqUs" target="_blank" rel="noopener">Написать в MAX</a>
+                <a class="tg" href="https://t.me/ShakirNat?text=%D0%93%D0%9E%D0%94" target="_blank" rel="noopener">Написать в Telegram</a>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+      <div class="group">
+        <h3>Проработки</h3>
+        <div class="cards">
+          <details class="svc" id="s-venera">
+            <summary><span class="svc-t">Венера: деньги, отношения, принятие себя</span><span class="svc-p">5 000 ₽</span><span class="svc-l">Календарь точных дат и действий под вашу карту</span><span class="svc-arw" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="#E9C77F" stroke-width="1.5" stroke-linecap="round"/></svg></span></summary>
+            <div class="svc-body">
+              <h4 class="svc-name">Персональные компенсаторные практики (проработки планет)</h4>
+              <p class="svc-plain">Проработка: что и когда делать, чтобы мягко выровнять тему</p>
+              <dl>
+                <div><dt>С каким вопросом приходят</dt><dd class="q">«Деньги приходят и тут же уходят»</dd><dd class="q">«Не нравлюсь себе в зеркале»</dd></div>
+                <div><dt>Что вы получите</dt><dd><ul><li>Календарь точных дат и действий по Венере</li><li>Темы: деньги, отношения, принятие себя и своей внешности</li></ul></dd></div>
+                <div><dt>Что нужно от вас</dt><dd><ul><li>Дата, точное время и место рождения</li></ul></dd></div>
+                <div><dt>Как и когда</dt><dd>PDF и подробные голосовые (или встреча в Zoom) через 2-7 рабочих дней после того, как я получу все данные</dd></div>
+              </dl>
+              
+              <p class="hint">В Telegram сообщение с названием разбора подставится само, в MAX просто напишите его название</p>
+              <div class="pair">
+                <a class="max" href="https://max.ru/u/f9LHodD0cOJmwy9Yo51txASlvxHI5Sg26Z7G7Q9MqKHAkw8haNu51zCBqUs" target="_blank" rel="noopener">Написать в MAX</a>
+                <a class="tg" href="https://t.me/ShakirNat?text=%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%3A%20%D0%9F%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B5%D0%BD%D1%81%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D1%8B%D0%B5%20%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8%20%28%D0%BF%D1%80%D0%BE%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%BF%D0%BB%D0%B0%D0%BD%D0%B5%D1%82%29%2C%20%D0%92%D0%B5%D0%BD%D0%B5%D1%80%D0%B0" target="_blank" rel="noopener">Написать в Telegram</a>
+              </div>
+            </div>
+          </details>
+          <details class="svc" id="s-merkuriy">
+            <summary><span class="svc-t">Меркурий: апатия, бессонница, сплетни</span><span class="svc-p">5 000 ₽</span><span class="svc-l">Календарь точных дат и действий под вашу карту</span><span class="svc-arw" aria-hidden="true"><svg viewBox="0 0 12 12"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="#E9C77F" stroke-width="1.5" stroke-linecap="round"/></svg></span></summary>
+            <div class="svc-body">
+              <h4 class="svc-name">Персональные компенсаторные практики (проработки планет)</h4>
+              <p class="svc-plain">Проработка: что и когда делать, чтобы вернуть силы и спокойствие</p>
+              <dl>
+                <div><dt>С каким вопросом приходят</dt><dd class="q">«Ничего не хочется, ночью не могу уснуть»</dd><dd class="q">«В коллективе обсуждают за спиной»</dd></div>
+                <div><dt>Что вы получите</dt><dd><ul><li>Календарь точных дат и действий по Меркурию</li><li>Темы: апатия, бессонница, сплетни в коллективе</li></ul></dd></div>
+                <div><dt>Что нужно от вас</dt><dd><ul><li>Дата, точное время и место рождения</li></ul></dd></div>
+                <div><dt>Как и когда</dt><dd>PDF и подробные голосовые (или встреча в Zoom) через 2-7 рабочих дней после того, как я получу все данные</dd></div>
+              </dl>
+              
+              <p class="hint">В Telegram сообщение с названием разбора подставится само, в MAX просто напишите его название</p>
+              <div class="pair">
+                <a class="max" href="https://max.ru/u/f9LHodD0cOJmwy9Yo51txASlvxHI5Sg26Z7G7Q9MqKHAkw8haNu51zCBqUs" target="_blank" rel="noopener">Написать в MAX</a>
+                <a class="tg" href="https://t.me/ShakirNat?text=%D0%A5%D0%BE%D1%87%D1%83%20%D1%83%D0%B7%D0%BD%D0%B0%D1%82%D1%8C%20%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D1%8F%3A%20%D0%9F%D0%B5%D1%80%D1%81%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%BA%D0%BE%D0%BC%D0%BF%D0%B5%D0%BD%D1%81%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D1%8B%D0%B5%20%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B8%20%28%D0%BF%D1%80%D0%BE%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B8%20%D0%BF%D0%BB%D0%B0%D0%BD%D0%B5%D1%82%29%2C%20%D0%9C%D0%B5%D1%80%D0%BA%D1%83%D1%80%D0%B8%D0%B9" target="_blank" rel="noopener">Написать в Telegram</a>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <div class="pick">
+      <h3>Не знаете, что выбрать</h3>
+      <p>Напишите в двух словах, что у вас происходит, и я подскажу, какой разбор подойдёт</p>
+      <div class="pair on-dark">
+        <a class="max" href="https://max.ru/u/f9LHodD0cOJmwy9Yo51txASlvxHI5Sg26Z7G7Q9MqKHAkw8haNu51zCBqUs" target="_blank" rel="noopener">Написать в MAX</a>
+        <a class="tg" href="https://t.me/ShakirNat?text=%D0%9F%D0%BE%D0%BC%D0%BE%D0%B3%D0%B8%D1%82%D0%B5%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80" target="_blank" rel="noopener">Помогите подобрать разбор</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky why planet-pad" id="pochemu">
+  <div class="neb neb-dust" aria-hidden="true"></div>
+  <canvas class="sky-canvas" aria-hidden="true"></canvas>
+  <div class="planet planet-b" data-par="0.18" aria-hidden="true"><img src="img/planet-wine.webp" alt="" width="520" height="520" decoding="async"></div>
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="why-copy rise">
+        <h2 class="h2">Почему об этом стоит подумать <em>сейчас</em></h2>
+        <p class="big">Конец года - время, когда 2027 год ещё можно спланировать, а не разбираться с ним по ходу</p>
+        <p>Как выглядит решение вслепую:</p>
+        <ul class="cost">
+          <li>Подписали договор не в тот месяц и полгода разгребаете последствия</li>
+          <li>Ушли с работы на эмоциях, а лучшее предложение пришло бы через пару месяцев</li>
+          <li>Подняли цену, когда люди как раз затянули пояса</li>
+        </ul>
+        <p>Разбор не решит за вас. Он покажет, в какие периоды следующего года начинать, а в какие спокойно доделывать начатое</p>
+        <div class="pair on-dark">
+          <a class="max" href="#s-god">Прогноз на год</a>
+          <a class="tg" href="https://t.me/ShakirNat?text=%D0%93%D0%9E%D0%94" target="_blank" rel="noopener">Написать слово ГОД</a>
+        </div>
+      </div>
+      <div class="rise">
+        <p class="asks-h">С чем ко мне приходят</p>
+        <ul class="asks">
+          <li><a href="#s-horar">«Вернут ли мне деньги и когда?» <small>один вопрос ↓</small></a></li>
+          <li><a href="#s-god">«Как спланировать следующий год, чтобы не метаться?» <small>год вперёд ↓</small></a></li>
+          <li><a href="#s-biznes">«Почему доход стоит на месте, хотя я работаю больше?» <small>деньги в деле ↓</small></a></li>
+          <li><a href="#s-para">«Мы с мужем живём как соседи, это можно вернуть?» <small>пара ↓</small></a></li>
+          <li><a href="#s-rebenok">«Может, мы ведём ребёнка не туда?» <small>ребёнок ↓</small></a></li>
+          <li><a href="#s-rod">«Почему у нас в семье всё повторяется?» <small>род ↓</small></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky" id="kak">
+  <canvas class="sky-canvas" aria-hidden="true"></canvas>
+  <div class="wrap narrow">
+    <div class="sheet rise">
+      <h2 class="h2">Как проходит <em>работа</em></h2>
+      <ol class="steps">
+        <li><b>Пишете мне в Telegram или MAX</b> и называете разбор. Не знаете какой, подберём вместе</li>
+        <li><b>Присылаете дату, точное время и место рождения.</b> Время подойдёт из бирки или со слов мамы. Если его нет совсем, восстанавливаем по событиям вашей жизни</li>
+        <li><b>Говорим о событиях вашего прошлого.</b> Так я настраиваю расчёт точно под вас</li>
+        <li><b>Я делаю расчёт и собираю разбор</b></li>
+        <li><b>Через 2-7 рабочих дней</b> после того, как я получила все данные, вы получаете PDF и подробные голосовые. Если удобнее, встречаемся в Zoom</li>
+      </ol>
+      <p class="note-box pay">Оплата 100% до начала работы, договариваемся в личке</p>
+      <p class="note-box one">С одним вопросом быстрее: нужна только минута, когда он возник, ответ приходит голосовым</p>
+      <p class="consent">Нажимая кнопку, вы соглашаетесь с <a href="https://docs.google.com/document/d/1KCnxYIBmCRD1MqweI5adBJaSfShsV2YE/preview" target="_blank" rel="noopener">офертой</a>, <a href="https://docs.google.com/document/d/1sGhTnaQ-jIj33BajJ1S14QXFV6hGfOkX/preview" target="_blank" rel="noopener">политикой конфиденциальности</a> и <a href="https://drive.google.com/file/d/17V4s-sA-BxPXUQWweP0CXxO0BKYS9cvh/view" target="_blank" rel="noopener">соглашением о хранении персональных данных</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="sec sky cases planet-pad" id="primery">
+  <div class="neb neb-sky" aria-hidden="true" style="opacity:.35; transform:scaleX(-1)"></div>
+  <canvas class="sky-canvas" aria-hidden="true"></canvas>
+  <div class="planet planet-d" data-par="0.1" aria-hidden="true"><img src="img/planet-brass.webp" alt="" width="760" height="760" decoding="async"></div>
+  <div class="wrap">
+    <h2 class="h2">Как это выглядит <em>в жизни</em></h2>
+    <p class="lead">Три истории без астрологических терминов: что человека тревожило, что показал разбор и что было дальше</p>
+    <div class="case-grid">
+      <figure class="case rise">
+        <h3>Не кинет ли партнёр</h3>
+        <dl>
+          <dt>Ситуация</dt><dd>Человеку предложили вложить приличную сумму в совместный проект. Партнёр один не тянул по деньгам и обещал процент с продажи</dd>
+          <dt>Вопрос</dt><dd class="q">«Получу ли я хорошую прибыль от партнёра?»</dd>
+          <dt>Что показал разбор</dt><dd>Партнёр надёжный и отдаст ровно то, что обещал</dd>
+          <dt>Что было в жизни</dt><dd>Через две недели после сделки пришла прибыль, ровно та сумма, о которой договаривались</dd>
+        </dl>
+        <figcaption>Ответ на один вопрос, публикуется с разрешения клиента</figcaption>
+      </figure>
+      <figure class="case rise">
+        <h3>Любит ли муж</h3>
+        <dl>
+          <dt>Ситуация</dt><dd>Подруга рассказала, что муж изменяет ей много лет. Чужая история начала примеряться на себя, хотя в своём браке больше десяти лет всё хорошо</dd>
+          <dt>Вопрос</dt><dd class="q">«Любит ли меня муж и нет ли у него любовницы?»</dd>
+          <dt>Что показал разбор</dt><dd>Муж любит, третьего человека в этой истории нет</dd>
+          <dt>Что было в жизни</dt><dd>Разбору почти год, у пары всё по-прежнему хорошо</dd>
+        </dl>
+        <figcaption>Ответ на один вопрос, публикуется с разрешения клиента</figcaption>
+      </figure>
+      <figure class="case rise">
+        <h3>Юля, фотограф</h3>
+        <dl>
+          <dt>Ситуация</dt><dd>Сильное портфолио, благодарные заказчики, а денег всё время чуть-чуть не хватает. Съёмка на час превращается в два, скидка подруге, потом подруге подруги</dd>
+          <dt>Что показал разбор</dt><dd>У Юли год, когда главная тема - как её видят в профессии и чего стоит её работа. Заказов станет больше. Если цена останется «чтобы всем было доступно», вместе с заказами вырастет усталость, а денег больше не станет</dd>
+          <dt>О чём договорились</dt><dd>В октябре никаких скидок и ничего «сверху» на эмоциях. Каждый случай, где отдала больше, чем получила, Юля записывает. Новый прайс она объявит в срок, который мы выбрали по её карте</dd>
+        </dl>
+        <figcaption>Деньги и год вперёд, имя изменено</figcaption>
+      </figure>
+    </div>
+    <figure class="quote rise">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 2 L22.4 17.6 L38 20 L22.4 22.4 L20 38 L17.6 22.4 L2 20 L17.6 17.6 Z" fill="#E9C77F"/></svg>
+      <blockquote>«Деньги мне вернули точно в указанный тобой срок»</blockquote>
+      <figcaption>Отзыв после хорара, ответа на один вопрос</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec sky about" id="obo-mne">
+  <canvas class="sky-canvas" aria-hidden="true"></canvas>
+  <div class="wrap narrow">
+    <div class="sheet rise">
+      <h2 class="h2">Обо <em>мне</em></h2>
+      <p class="me">Я астролог и астропсихолог. И сама прагматик: ценю астрологию за то, что она показывает системные ошибки, без мистики и магии</p>
+      <p>Училась в двух школах: в Академии Astrovegis и в Высшей школе астрологии Елены Негрей. Изучила 10 направлений, на каждое есть сертификат</p>
+      <details class="certs">
+        <summary>Все 10 сертификатов <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></summary>
+        <ol>
+          <li><b>Натальная астрология</b><span>портрет личности по дате, времени и месту рождения · Академия Astrovegis</span></li>
+          <li><b>Натал-Эксперт</b><span>углублённый разбор личности · Академия Astrovegis</span></li>
+          <li><b>Синастрия. Астрология взаимоотношений</b><span>совместимость и отношения · Академия Astrovegis</span></li>
+          <li><b>Кармическая астрология</b><span>семейные сценарии и жизненные задачи · Академия Astrovegis</span></li>
+          <li><b>Хорарная астрология</b><span>ответ на один вопрос по минуте, когда он возник · сертификат №172, Академия Astrovegis</span></li>
+          <li><b>Астрология профессионального предназначения</b><span>призвание и таланты в работе · Высшая школа астрологии Елены Негрей</span></li>
+          <li><b>Детская астрология</b><span>таланты и развитие ребёнка · Высшая школа астрологии Елены Негрей</span></li>
+          <li><b>Астрология родового наследия</b><span>что передаётся по роду · Высшая школа астрологии Елены Негрей</span></li>
+          <li><b>Финансовая и бизнес-астрология</b><span>деньги и рост дела · Академия Astrovegis и Высшая школа астрологии Елены Негрей</span></li>
+          <li><b>Астрология прогнозирования</b><span>прогноз на год вперёд · Высшая школа астрологии Елены Негрей и Академия Astrovegis</span></li>
+        </ol>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sky free" id="besplatno">
+  <div class="neb neb-sky" aria-hidden="true" style="opacity:.6"></div>
+  <canvas class="sky-canvas" aria-hidden="true"></canvas>
+  <div class="planet planet-e slow" data-par="0.08" aria-hidden="true"><img src="img/planet-brass.webp" alt="" width="760" height="760" decoding="async"></div>
+  <div class="wrap narrow rise">
+    <h2 class="h2">Начните <em>с бесплатного</em></h2>
+    <p class="lead">Прогноз на месяц по дате рождения: деньги, отношения, дело и ресурс. Считается за минуту прямо в браузере</p>
+    <a class="btn btn-gold" href="https://kursk-24.github.io/prognoz-shakirova/" target="_blank" rel="noopener">Получить прогноз на месяц ↗</a>
+  </div>
+</section>
+
+<section class="sec sky" id="voprosy">
+  <canvas class="sky-canvas" aria-hidden="true"></canvas>
+  <div class="wrap narrow">
+    <div class="sheet faq rise">
+      <h2 class="h2">Вопросы</h2>
+      <details><summary>Нужно ли точное время рождения? <i aria-hidden="true"></i></summary><div class="a"><p>Для разборов по дате рождения да: подойдёт время из бирки или со слов мамы. Если времени нет, его восстанавливают по событиям вашей жизни</p><p>Для ответа на один вопрос время рождения не нужно, только минута, когда вопрос возник. Для разбора смысла союза время рождения партнёра знать не обязательно</p></div></details>
+      <details><summary>Сколько ждать результат? <i aria-hidden="true"></i></summary><div class="a"><p>От 2 до 7 рабочих дней после того, как я получу все данные. Ответ на один вопрос приходит оперативно, голосовым</p></div></details>
+      <details><summary>Как оплатить? <i aria-hidden="true"></i></summary><div class="a"><p>Оплата 100% до начала работы, договариваемся в личке</p></div></details>
+      <details><summary>Это точно не гадание? <i aria-hidden="true"></i></summary><div class="a"><p>Нет. Расчёт строится по дате, времени и месту рождения, а ответ на один вопрос по минуте, когда он возник. Я смотрю на конкретику: что происходит, почему и в какие сроки</p></div></details>
+      <details><summary>В каком виде результат? <i aria-hidden="true"></i></summary><div class="a"><p>Структурированный PDF и подробные голосовые, по желанию встреча в Zoom. Ответ на один вопрос приходит голосовым</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="sky final" id="napisat">
+  <div class="neb neb-sky" aria-hidden="true" style="opacity:.5"></div>
+  <canvas class="sky-canvas" aria-hidden="true"></canvas>
+  <div class="planet planet-c" data-par="0.14" aria-hidden="true" style="width:150px; left:-40px; top:-10px; opacity:.75"><img src="img/planet-emerald.webp" alt="" width="720" height="720" decoding="async"></div>
+  <div class="wrap narrow rise">
+    <h2 class="h2">Напишите, и подберём разбор <em>под ваш вопрос</em></h2>
+    <p class="lead">Нажмите любую кнопку, Telegram или MAX, и в двух словах расскажите, что у вас происходит</p>
+    <div class="pair on-dark">
+      <a class="max" href="https://max.ru/u/f9LHodD0cOJmwy9Yo51txASlvxHI5Sg26Z7G7Q9MqKHAkw8haNu51zCBqUs" target="_blank" rel="noopener">Написать в MAX</a>
+      <a class="tg" href="https://t.me/ShakirNat?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%BE%D0%BC%D0%BE%D0%B3%D0%B8%D1%82%D0%B5%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80" target="_blank" rel="noopener">Написать в Telegram</a>
+    </div>
+    <p class="consent on-dark">Нажимая кнопку, вы соглашаетесь с <a href="https://docs.google.com/document/d/1KCnxYIBmCRD1MqweI5adBJaSfShsV2YE/preview" target="_blank" rel="noopener">офертой</a>, <a href="https://docs.google.com/document/d/1sGhTnaQ-jIj33BajJ1S14QXFV6hGfOkX/preview" target="_blank" rel="noopener">политикой конфиденциальности</a> и <a href="https://drive.google.com/file/d/17V4s-sA-BxPXUQWweP0CXxO0BKYS9cvh/view" target="_blank" rel="noopener">соглашением о хранении персональных данных</a></p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <div class="f-brand"><b>Наталья Шакирова</b><span>Астролог и астропсихолог</span></div>
+        <div class="f-links">
+          <a href="https://max.ru/u/f9LHodD0cOJmwy9Yo51txASlvxHI5Sg26Z7G7Q9MqKHAkw8haNu51zCBqUs" target="_blank" rel="noopener">Написать в MAX</a>
+          <a href="https://t.me/ShakirNat?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%9F%D0%BE%D0%BC%D0%BE%D0%B3%D0%B8%D1%82%D0%B5%20%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D1%8C%20%D1%80%D0%B0%D0%B7%D0%B1%D0%BE%D1%80" target="_blank" rel="noopener">Написать в Telegram</a>
+          <a href="https://t.me/astrolog1981" target="_blank" rel="noopener">Канал в Telegram</a>
+        </div>
+      </div>
+      <nav class="docs" aria-label="Документы">
+        <a href="https://docs.google.com/document/d/1KCnxYIBmCRD1MqweI5adBJaSfShsV2YE/preview" target="_blank" rel="noopener">Оферта</a>
+        <a href="https://docs.google.com/document/d/1sGhTnaQ-jIj33BajJ1S14QXFV6hGfOkX/preview" target="_blank" rel="noopener">Политика конфиденциальности</a>
+        <a href="https://drive.google.com/file/d/17V4s-sA-BxPXUQWweP0CXxO0BKYS9cvh/view" target="_blank" rel="noopener">Соглашение о хранении персональных данных</a>
+        <a href="https://drive.google.com/file/d/1tm5i4NH9azGTEIaiXkilbdLhiJ30ps-E/view" target="_blank" rel="noopener">Согласие на получение рекламных рассылок</a>
+      </nav>
+    </div>
+    <div class="legal">
+      <p>Шакирова Наталья Александровна, ИНН 525819862234<br>Расчёт носит рекомендательный характер</p>
+      <a class="top" href="#top">Наверх ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var hdr = document.querySelector('.hdr'), burger = document.querySelector('.burger'), menu = document.getElementById('menu');
+
+  function closeMenu(){ menu.classList.remove('open'); burger.setAttribute('aria-expanded','false'); }
+  burger.addEventListener('click', function(){
+    var open = !menu.classList.contains('open');
+    menu.classList.toggle('open', open); burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  menu.addEventListener('click', function(e){ if (e.target.closest('a')) closeMenu(); });
+
+  /* якорь на карточку услуги раскрывает её */
+  function openTarget(hash){
+    if (!hash || hash.length < 2) return;
+    var el = document.getElementById(decodeURIComponent(hash.slice(1)));
+    if (el && el.tagName === 'DETAILS') el.open = true;
+  }
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="#"]');
+    if (a) openTarget(a.getAttribute('href'));
+  });
+  openTarget(location.hash);
+
+  /* появление блоков */
+  var rises = document.querySelectorAll('.rise');
+  if (reduce || !('IntersectionObserver' in window)) { rises.forEach(function(el){ el.classList.add('in'); }); }
+  else {
+    var ro = new IntersectionObserver(function(es){ es.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); ro.unobserve(en.target); } }); }, {rootMargin:'0px 0px -8% 0px'});
+    rises.forEach(function(el){ ro.observe(el); });
+  }
+
+  /* ---------- звёздное небо ---------- */
+  var DPR = Math.min(window.devicePixelRatio || 1, 2);
+  var mobile = window.matchMedia('(max-width: 700px)').matches;
+  var skies = [];
+  function rnd(a,b){ return a + Math.random()*(b-a); }
+
+  function makeSky(cv){
+    var s = {cv:cv, ctx:cv.getContext('2d'), stars:[], glints:[], visible:false, w:0, h:0, hero:cv.dataset.stars === 'hero'};
+    s.resize = function(){
+      var r = cv.getBoundingClientRect();
+      s.w = Math.max(1, r.width); s.h = Math.max(1, r.height);
+      cv.width = Math.round(s.w*DPR); cv.height = Math.round(s.h*DPR);
+      s.ctx.setTransform(DPR,0,0,DPR,0,0);
+      var area = s.w*s.h, dens = mobile ? 1/5200 : 1/4200;
+      var n = Math.min(mobile ? 150 : 320, Math.round(area*dens));
+      s.stars = [];
+      for (var i=0;i<n;i++){
+        var t = Math.random(), size = t < .7 ? rnd(.35,.8) : (t < .94 ? rnd(.9,1.4) : rnd(1.5,2.1));
+        var warm = Math.random() < .35;
+        s.stars.push({x:Math.random()*s.w, y: s.hero ? rnd(s.h*.25, s.h) : Math.random()*s.h, r:size,
+          ph:Math.random()*Math.PI*2, sp:rnd(.6,2.2), base:rnd(.35,.85), c: warm ? '247,214,150' : '246,242,232'});
+      }
+      var g = Math.max(3, Math.min(mobile ? 6 : 12, Math.round(area/90000)));
+      s.glints = [];
+      for (var j=0;j<g;j++) s.glints.push({x:Math.random()*s.w, y: s.hero ? rnd(s.h*.35, s.h*.95) : Math.random()*s.h, len:rnd(7,15), ph:Math.random()*Math.PI*2, sp:rnd(.35,.8)});
+    };
+    s.draw = function(t){
+      var c = s.ctx; c.clearRect(0,0,s.w,s.h);
+      for (var i=0;i<s.stars.length;i++){
+        var st = s.stars[i], a = st.base*(.55 + .45*Math.sin(t*.001*st.sp + st.ph));
+        c.fillStyle = 'rgba(' + st.c + ',' + a.toFixed(3) + ')';
+        if (st.r < 1){ c.fillRect(st.x, st.y, st.r*1.6, st.r*1.6); }
+        else { c.beginPath(); c.arc(st.x, st.y, st.r, 0, 6.2832); c.fill(); }
+      }
+      for (var k=0;k<s.glints.length;k++){
+        var gl = s.glints[k], v = Math.sin(t*.001*gl.sp + gl.ph);
+        if (v <= 0.15) continue;
+        var a2 = Math.pow((v-.15)/.85, 2), L = gl.len*(.6 + .4*a2);
+        c.save(); c.translate(gl.x, gl.y);
+        var grd = c.createRadialGradient(0,0,0,0,0,L*.45);
+        grd.addColorStop(0,'rgba(255,248,226,' + (.9*a2).toFixed(3) + ')'); grd.addColorStop(1,'rgba(255,230,170,0)');
+        c.fillStyle = grd; c.beginPath(); c.arc(0,0,L*.45,0,6.2832); c.fill();
+        c.fillStyle = 'rgba(255,246,220,' + (.95*a2).toFixed(3) + ')';
+        c.beginPath(); c.moveTo(0,-L); c.lineTo(.9,-.9); c.lineTo(L,0); c.lineTo(.9,.9); c.lineTo(0,L); c.lineTo(-.9,.9); c.lineTo(-L,0); c.lineTo(-.9,-.9); c.closePath(); c.fill();
+        c.restore();
+      }
+    };
+    return s;
+  }
+
+  document.querySelectorAll('.sky-canvas').forEach(function(cv){ skies.push(makeSky(cv)); });
+  function resizeAll(){ skies.forEach(function(s){ s.resize(); if (reduce) s.draw(0); }); }
+  resizeAll();
+  var rt; window.addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(resizeAll, 150); });
+  if ('ResizeObserver' in window){ var rso = new ResizeObserver(function(){ clearTimeout(rt); rt = setTimeout(resizeAll, 150); }); document.querySelectorAll('.sky').forEach(function(el){ rso.observe(el); }); }
+
+  var running = false, raf = 0, hidden = document.hidden;
+  var planets = Array.prototype.slice.call(document.querySelectorAll('.planet[data-par]'));
+  function frame(t){
+    raf = 0;
+    var any = false;
+    for (var i=0;i<skies.length;i++){ if (skies[i].visible){ skies[i].draw(t); any = true; } }
+    var vh = window.innerHeight;
+    for (var p=0;p<planets.length;p++){
+      var el = planets[p], sec = el.parentNode, r = sec.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > vh) continue;
+      var k = parseFloat(el.dataset.par), off = (r.top + r.height/2 - vh/2)*k;
+      el.style.transform = 'translate3d(0,' + off.toFixed(1) + 'px,0)';
+    }
+    if (any && !hidden) raf = requestAnimationFrame(frame); else running = false;
+  }
+  function kick(){ if (reduce || hidden) return; if (!running){ running = true; raf = requestAnimationFrame(frame); } }
+
+  if ('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(en){ skies.forEach(function(s){ if (s.cv === en.target) s.visible = en.isIntersecting; }); });
+      kick();
+    }, {rootMargin:'80px 0px'});
+    skies.forEach(function(s){ io.observe(s.cv); });
+  } else { skies.forEach(function(s){ s.visible = true; }); kick(); }
+
+  document.addEventListener('visibilitychange', function(){
+    hidden = document.hidden;
+    if (hidden){ if (raf) cancelAnimationFrame(raf); raf = 0; running = false; } else kick();
+  });
+
+  if (reduce){ skies.forEach(function(s){ s.draw(0); }); var v = document.querySelector('.hero-bg video'); if (v){ v.pause(); v.removeAttribute('autoplay'); } }
+})();
+</script>
+</body>
+</html>
